@@ -7,7 +7,16 @@ export default defineConfig({
     vite: {
         plugins: [tailwindcss()],
         server: {
-            allowedHosts: true
+            allowedHosts: [
+                "devserver-preview--stately-dragon-27a993.netlify.app",
+                ".netlify.app"
+            ]
+        },
+        preview: {
+            allowedHosts: [
+                "devserver-preview--stately-dragon-27a993.netlify.app",
+                ".netlify.app"
+            ]
         }
     },
     integrations: [react()],
